@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -Wall -Wextra -pedantic -O0 -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/TME5.dir/src/main.cpp.o CMakeFiles/TME5.dir/src/util/mtrand.cpp.o -o TME5

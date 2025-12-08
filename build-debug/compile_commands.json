@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/Users/karim/Devloppement/m1/PSCR/TME5/build-debug",
+  "command": "/usr/bin/c++  -I/Users/karim/Devloppement/m1/PSCR/TME5/src -g -Wall -Wextra -pedantic -O0 -std=c++20 -arch arm64 -o CMakeFiles/TME5.dir/src/main.cpp.o -c /Users/karim/Devloppement/m1/PSCR/TME5/src/main.cpp",
+  "file": "/Users/karim/Devloppement/m1/PSCR/TME5/src/main.cpp",
+  "output": "CMakeFiles/TME5.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/karim/Devloppement/m1/PSCR/TME5/build-debug",
+  "command": "/usr/bin/c++  -I/Users/karim/Devloppement/m1/PSCR/TME5/src -g -Wall -Wextra -pedantic -O0 -std=c++20 -arch arm64 -o CMakeFiles/TME5.dir/src/util/mtrand.cpp.o -c /Users/karim/Devloppement/m1/PSCR/TME5/src/util/mtrand.cpp",
+  "file": "/Users/karim/Devloppement/m1/PSCR/TME5/src/util/mtrand.cpp",
+  "output": "CMakeFiles/TME5.dir/src/util/mtrand.cpp.o"
+}
+]
