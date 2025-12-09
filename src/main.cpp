@@ -57,20 +57,20 @@ int main(int argc, char *argv[]) {
   pr::Renderer renderer;
   if (opts.mode == "sequential") {
     renderer.render(scene, img);
+  } else if (opts.mode == "ThreadPerPixel") {
+    renderer.renderThreadPerPixel(scene, img);
+  } else if (opts.mode == "ThreadPerRow") {
+    renderer.renderThreadPerRow(scene, img);
+  } else if (opts.mode == "ThreadManual") {
+    renderer.renderThreadManual(scene, img, opts.nbthread);
+  } else if (opts.mode == "PoolPixel") {
+    renderer.renderPoolPixel(scene, img, opts.nbthread);
     /*
-           } else if (opts.mode == "ThreadPerPixel") {
-           renderer.renderThreadPerPixel(scene, img);
-       } else if (opts.mode == "ThreadPerRow") {
-           renderer.renderThreadPerRow(scene, img);
-       } else if (opts.mode == "ThreadManual") {
-           renderer.renderThreadManual(scene, img, opts.nbthread);
-       } else if (opts.mode == "PoolPixel") {
-           renderer.renderPoolPixel(scene, img, opts.nbthread);
-       } else if (opts.mode == "PoolRow") {
-           renderer.renderPoolRow(scene, img, opts.nbthread);
-       } else if (opts.mode == "PoolFunctionalRow") {
-           renderer.renderPoolFunctionalRow(scene, img, opts.nbthread);
-                   */
+  } else if (opts.mode == "PoolRow") {
+    renderer.renderPoolRow(scene, img, opts.nbthread);
+  } else if (opts.mode == "PoolFunctionalRow") {
+    renderer.renderPoolFunctionalRow(scene, img, opts.nbthread);
+*/
   } else {
     std::cerr << "Unknown mode: " << opts.mode << std::endl;
     return 1;

@@ -1,5 +1,8 @@
 #pragma once
 
+#include "Scene.h"
+#include "Image.h"
+
 namespace pr {
 
 class Job {
@@ -30,5 +33,43 @@ public :
 	~SleepJob(){}
 };
 **/
+
+class PixelJob : public Job {
+	private:
+		const Scene& scene;
+		Image& img;
+		const int x,y;
+
+	public:
+		PixelJob(const Scene& scene, Image& img, const int x, const int y) :
+		scene(scene),
+		img(img),
+		x(x),
+		y(y)
+		{}
+
+		void run() override final {
+			const Scene::screen_t& screen = scene.getScreenPoints();
+			// le point de l'ecran par lequel passe ce rayon
+			auto& screenPoint = screen[y][x];
+			// le rayon a inspecter
+			Ray ray(scene.getCameraPos(), screenPoint);
+
+			int targetSphere = scene.findClosestInter(ray);
+
+			if (targetSphere == -1) {
+				// keep background color
+				return;
+			} else {
+				const Sphere& obj = scene.getObject(targetSphere);
+				// pixel prend la couleur de l'objet
+				Color finalcolor = scene.computeColor(obj, ray);
+				// mettre a jour la couleur du pixel dans l'image finale.
+				img.pixel(x, y) = finalcolor;
+			}
+		}
+
+
+};
 
 }

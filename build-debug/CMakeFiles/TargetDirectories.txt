@@ -1,3 +1,0 @@
-/Users/karim/Devloppement/m1/PSCR/TME5/build-debug/CMakeFiles/TME5.dir
-/Users/karim/Devloppement/m1/PSCR/TME5/build-debug/CMakeFiles/edit_cache.dir
-/Users/karim/Devloppement/m1/PSCR/TME5/build-debug/CMakeFiles/rebuild_cache.dir
